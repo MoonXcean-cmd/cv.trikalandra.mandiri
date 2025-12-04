@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV Tri Kalandra Mandiri — Kebudayaan & Seni</title>
+  <meta name="description" content="CV Tri Kalandra Mandiri - manajemen acara kebudayaan, pertunjukan seni, promosi budaya, dan area management (K-WO & Farkir Area)." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#2563EB; /* bright blue */
+      --accent-2:#22C55E; /* green */
+      --muted:#475569;
+      --bg:#F8FAFC;
+      --card:#FFFFFF;
+      --glass: rgba(37,99,235,0.06);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto, 'Helvetica Neue', Arial; background:linear-gradient(120deg,#DBEAFE 0%, #ECFEFF 30%, #FEF9C3 60%, #FCE7F3 100%); color:#0f172a; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:var(--maxw); margin:0 auto; padding:28px}
+
+    /* NAVBAR */
+    header{position:sticky; top:0; z-index:60; backdrop-filter: blur(6px); background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); border-bottom:1px solid rgba(15,23,42,0.06) rgba(255,255,255,0.03)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:48px; height:48px; background:linear-gradient(135deg,var(--accent),#4F46E5); border-radius:10px; display:grid; place-items:center; font-weight:800}
+    .brand h1{margin:0;font-size:16px}
+    nav ul{list-style:none; display:flex; gap:18px; margin:0; padding:0}
+    nav a{color:inherit; text-decoration:none; font-weight:600; font-size:14px}
+    .cta{background:linear-gradient(135deg,#2563EB,#22C55E,#EAB308); padding:12px 18px; border-radius:999px; font-weight:800; color:white; box-shadow:0 10px 26px rgba(34,197,94,.35); transition:.3s; border:none; outline:none}
+    .cta:hover{transform:translateY(-2px) scale(1.03); box-shadow:0 18px 34px rgba(234,179,8,.45)}
+    .cta:hover{transform:translateY(-2px) scale(1.02); box-shadow:0 14px 30px rgba(234,179,8,.45)}
+
+    /* mobile menu */
+    .menu-toggle{display:none}
+    @media(max-width:900px){
+      nav ul{display:none}
+      .menu-toggle{display:block; background:transparent; border:0; color:inherit}
+    }
+
+    /* HERO */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:28px; align-items:stretch; padding:44px 0}
+    .hero-left{padding:28px;}
+    .pretitle{display:inline-block; background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(79,70,229,0.08)); color:var(--accent); padding:8px 12px; border-radius:999px; font-weight:700; font-size:13px}
+    h2{font-family:'Playfair Display', serif; font-size:36px; margin:14px 0}
+    p.lead{color:var(--muted); max-width:60ch}
+    .hero-actions{display:flex; gap:12px; margin-top:18px}
+
+    /* card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:16px; padding:18px; box-shadow:0 6px 30px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03)}
+
+    /* services grid */
+    .grid{display:grid; gap:18px}
+    .services{grid-template-columns:repeat(3,1fr)}
+    .service{padding:18px; border-radius:12px; background:var(--glass); border:1px solid rgba(255,255,255,0.02)}
+    .service h3{margin:8px 0 6px}
+
+    /* responsive */
+    @media(max-width:1100px){.hero{grid-template-columns:1fr 340px}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr} .hero-right{order:-1}}
+    @media(max-width:700px){.services{grid-template-columns:repeat(1,1fr)} nav ul{display:none}}
+
+    /* gallery */
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+    .gallery img{width:100%; height:160px; object-fit:cover; border-radius:10px}
+    @media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+    /* team */
+    .team{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    .member{padding:14px; border-radius:12px; text-align:center}
+    .avatar{width:110px;height:110px;border-radius:999px;margin:0 auto; display:block; object-fit:cover}
+    @media(max-width:900px){.team{grid-template-columns:repeat(1,1fr)}}
+
+    /* contact */
+    form{display:grid; gap:12px}
+    input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.06); padding:12px;border-radius:8px;color:inherit}
+
+    footer{padding:40px 0; color:var(--muted)}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:12px 16px;border-radius:999px;background:linear-gradient(135deg,#38BDF8,#A78BFA,#F472B6);color:white;font-weight:700;box-shadow:0 10px 22px rgba(168,85,247,.4);transition:.3s;border:none;outline:none}
+    .pill:hover{transform:translateY(-2px) scale(1.03)}
+
+    /* force remove all button/anchor outlines & borders */
+    button, .cta, .pill, a{border:0 !important; outline:none !important}
+    button:focus, .cta:focus, .pill:focus, a:focus{outline:none !important}
+
+    /* simple animation */
+    .fade-up{transform:translateY(8px);opacity:0;transition:all .6s cubic-bezier(.2,.9,.3,1)}
+    .fade-up.visible{transform:none;opacity:1}
+
+    /* modal */
+    .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(2,6,23,0.6); z-index:90}
+    .modal.open{display:flex}
+    .modal-card{max-width:900px; width:95%; background:#04102a; padding:18px; border-radius:12px}
+
+    /* badge */
+    .badge{display:inline-block;padding:6px 10px;border-radius:8px;background:rgba(124,58,237,0.13); color:var(--accent); font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo.jpeg" alt="logo" style="height: 40px;">
+
+        <div>
+          <h1>CV Tri Kalandra Mandiri</h1>
+          <div class="muted" style="font-size:12px">Kebudayaan • Event • Area Management</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="menu-toggle" aria-label="buka menu" onclick="toggleMenu()">☰</button>
+        <ul id="navlist">
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#team">Tim</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex; gap:10px; align-items:center">
+        <a class="muted" href="tel:081387455589">0813-8745-5589</a>
+        <a class="cta" href="#contact">Hubungi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <span class="pretitle">Sejak 1990-an</span>
+        <h2>Memelihara identitas budaya melalui acara dan kolaborasi seni</h2>
+        <p class="lead">CV Tri Kalandra Mandiri bergerak di bidang kebudayaan dan seni — menyelenggarakan festival, pertunjukan tradisi dan kontemporer, manajemen area (K-WO & Farkir Area), serta program edukasi dan pelestarian budaya. Kami menggabungkan profesionalitas, jaringan luas, dan pendekatan kreatif.</p>
+
+        <div class="hero-actions">
+          <a class="cta" href="#contact">Pesan Layanan</a>
+          <a class="pill" href="#services">Lihat Layanan</a>
+          <a class="pill" href="file:///C:/Users/zayan/OneDrive/Dokumen/CV%20TRIKALANDRA%20MANDIRI/trikalandra.mandiri/COMPANY%20PROFILE%20CV%20TRI%20KALANDRA%20MANDIRI%20(1).pdf" target="_blank" onclick="toastPDF()" download>Unduh Company Profile</a>
+        </div>
+
+        <div style="margin-top:20px" class="card fade-up" data-ani>
+          <strong>Bidang usaha:</strong> Parkiran (Perparkiran) • Kebudayaan & Seni<br>
+          <strong>Alamat:</strong> Dusun Jenebin, Desa Purwadana, Telukjambe Timur, Karawang
+        </div>
+      </div>
+
+      <aside class="hero-right card" style="padding:18px">
+        <h3>Fast facts</h3>
+        <ul class="muted" style="padding-left:18px">
+          <li>Didirikan: 1990-an</li>
+          <li>KBLI: 52215 • 91021</li>
+          <li>Kontak: 0813-8745-5589</li>
+          <li>Email: trikalandramandiri@gmail.com</li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <h4 class="muted">Layanan unggulan</h4>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px">
+            <span class="badge">Event Management</span>
+            <span class="badge">Art Production</span>
+            <span class="badge">Area Management</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section id="services" style="margin-top:26px">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
+        <h3>Layanan Kami</h3>
+        <div class="muted">Pilih paket: <strong>Basic</strong> • <strong>Pro</strong> • <strong>Premium</strong></div>
+      </div>
+      <div class="grid services">
+        <div class="service card fade-up" data-ani>
+          <h3>Manajemen Acara Budaya</h3>
+          <p class="muted">Perencanaan, produksi, dan pelaksanaan festival, pertunjukan tradisional, dan acara komunitas.</p>
+          <ul class="muted" style="margin-top:8px;padding-left:18px">
+            <li>Konsep & skrip acara</li>
+            <li>Manajemen teknis & kru</li>
+          </ul>
+        </div>
+        <div class="service card fade-up" data-ani>
+          <h3>Produksi Pertunjukan</h3>
+          <p class="muted">Tari, musik, teater, dan kolaborasi seni kontemporer dengan seniman lokal.</p>
+        </div>
+        <div class="service card fade-up" data-ani>
+          <h3>Promosi & Pengembangan Komunitas</h3>
+          <p class="muted">Workshop, edukasi, dan program keterlibatan komunitas untuk pelestarian budaya.</p>
+        </div>
+        <div class="service card fade-up" data-ani>
+          <h3>Area Management (K-WO & Farkir Area)</h3>
+          <p class="muted">Pengelolaan lokasi acara, koordinasi lapangan, dan operasional.</p>
+        </div>
+        <div class="service card fade-up" data-ani>
+          <h3>Konsultasi Kebudayaan</h3>
+          <p class="muted">Perencanaan strategis dan penguatan identitas budaya untuk lembaga/komunitas.</p>
+        </div>
+        <div class="service card fade-up" data-ani>
+          <h3>Dokumentasi & Konten</h3>
+          <p class="muted">Fotografi, videografi, serta pembuatan konten promosi dan arsip kegiatan.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" style="margin-top:26px">
+      <h3>Galeri Kegiatan</h3>
+      <div class="muted" style="margin-bottom:12px">Contoh dokumentasi pertunjukan, festival, dan aktivitas komunitas.</div>
+      <div class="gallery">
+        <!-- Galeri aman & legal (stok foto bebas lisensi) bertema budaya & event Indonesia -->
+        <img src="poo1.jpg" alt="tari-tradisional-indonesia" onclick="openModal(this.src)">
+        <img src="poo2.jpg" alt="festival-budaya-indonesia" onclick="openModal(this.src)">
+        <img src="poo3.jpg" alt="panggung-pertunjukan" onclick="openModal(this.src)">
+        <img src="poo4.jpg" alt="tari-bali" onclick="openModal(this.src)">
+        <img src="poo5.jpg" alt="acara-komunitas" onclick="openModal(this.src)">
+        <img src="poo6.jpg" alt="koordinasi-event" onclick="openModal(this.src)">
+        <img src="poo7.jpg" alt="penonton-festival" onclick="openModal(this.src)">
+        <img src="poo8.jpg" alt="tim-event-lapangan" onclick="openModal(this.src)">
+      </div>
+    </section>
+
+    <!-- Premium Band / Trust Section -->
+    <section style="margin-top:26px">
+      <div class="card" style="background:linear-gradient(135deg,#2563EB,#22C55E,#EAB308); color:white">
+        <div class="grid" style="grid-template-columns:repeat(4,1fr); gap:14px; text-align:center">
+          <div>
+            <h3 style="margin:0">30+ Tahun</h3>
+            <div style="opacity:.9">Pengalaman</div>
+          </div>
+          <div>
+            <h3 style="margin:0">200+</h3>
+            <div style="opacity:.9">Kegiatan Budaya</div>
+          </div>
+          <div>
+            <h3 style="margin:0">50+</h3>
+            <div style="opacity:.9">Mitra Komunitas</div>
+          </div>
+          <div>
+            <h3 style="margin:0">End‑to‑End</h3>
+            <div style="opacity:.9">Manajemen Acara</div>
+          </div>
+        </div>
+        <div style="margin-top:14px; text-align:center; font-weight:700">Dipercaya oleh komunitas, lembaga, dan mitra budaya sejak 1990-an</div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" style="margin-top:26px">
+      <h3>Tim Inti</h3>
+      <div class="team">
+        <div class="member card fade-up" data-ani>
+          <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="simbol-komanditer">
+          <h4>Darsa Wibiksana (Komanditer)</h4>
+          <div class="muted">Kontak: 0858-9000-2757 • darsawibiksana56@gmail.com</div>
+        </div>
+        <div class="member card fade-up" data-ani>
+          <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="simbol-direktur">
+          <h4>Asep Komara, SH (Direktur)</h4>
+          <div class="muted">Kontak: 0813-8745-5589 • asepkomara6968@gmail.com</div>
+        </div>
+        <div class="member card fade-up" data-ani>
+          <img class="avatar" src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="simbol-bendahara">
+          <h4>Iis Heri Kusriyanto (Bendahara)</h4>
+          <div class="muted">Email: herikusriyanto76@gmail.com</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:26px">
+      <h3>Kontak & Pemesanan</h3>
+      <div class="grid" style="grid-template-columns:1fr 420px; gap:18px; margin-top:12px">
+        <div class="card">
+          <p class="muted">Isi form ini untuk mengirim permintaan penawaran. (Form ini menggunakan Formspree sebagai contoh — ganti action dengan endpoint Anda atau gunakan mailto fallback.)</p>
+          <form action="https://formspree.io/f/yourformid" method="POST" onsubmit="formSubmit(event)">
+            <input type="text" name="name" placeholder="Nama lengkap" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="No. Telepon / WhatsApp" required>
+            <select name="service">
+              <option value="Event">Manajemen Acara</option>
+              <option value="Production">Produksi Pertunjukan</option>
+              <option value="Area">Area Management</option>
+              <option value="Consult">Konsultasi Kebudayaan</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Pesan / kebutuhan detail"></textarea>
+            <div style="display:flex; gap:8px; align-items:center">
+              <button class="cta" type="submit">Kirim Permintaan</button>
+              <a class="pill" href="mailto:trikalandramandiri@gmail.com?subject=Permintaan%20Penawaran">Kirim via Email</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h4>Detail Perusahaan</h4>
+          <div class="muted" style="font-size:14px; line-height:1.6">
+            <strong>Nama:</strong> CV Tri Kalandra Mandiri<br>
+            <strong>Alamat:</strong> Dusun Jenebin RT 008 / RW 004, Desa Purwadana, Kec. Telukjambe Timur, Kab. Karawang, Jawa Barat<br>
+            <strong>NPWP:</strong> 1000 0000 0694 5987<br>
+            <strong>KBLI:</strong> 52215, 91021<br>
+            <strong>Email:</strong> trikalandramandiri@gmail.com<br>
+            <strong>Tel:</strong> 0813-8745-5589
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="pill" href="file:///C:/Users/zayan/OneDrive/Dokumen/CV%20TRIKALANDRA%20MANDIRI/trikalandra.mandiri/COMPANY%20PROFILE%20CV%20TRI%20KALANDRA%20MANDIRI%20(1).pdf" target="_blank" onclick="toastPDF()" download>Download Company Profile (PDF)</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FAQ & CTA -->
+    <section style="margin-top:26px">
+      <div class="card">
+        <h3>Kenapa Memilih Kami?</h3>
+        <ul class="muted" style="padding-left:18px">
+          <li>Pengalaman sejak 1990-an dan jaringan kuat di komunitas seni.</li>
+          <li>Solusi end-to-end: dari konsep hingga eksekusi & dokumentasi.</li>
+          <li>Spesialisasi pada area manajemen K-WO & Farkir Area.</li>
+        </ul>
+        <div style="margin-top:12px"><a class="cta" href="#contact">Minta Penawaran Premium</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
+      <div>
+        <strong>CV Tri Kalandra Mandiri</strong><br>
+        <span class="muted">Dusun Jenebin, Desa Purwadana, Telukjambe Timur — Karawang</span>
+      </div>
+      <div class="muted">© " + new Date().getFullYear() + " CV Tri Kalandra Mandiri — All rights reserved</div>
+    </div>
+  </footer>
+
+  <!-- modal preview -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button style="float:right;background:transparent;border:0;color:inherit;font-size:18px" onclick="closeModal()">✕</button>
+      <img id="modal-img" src="" alt="preview" style="width:100%; max-height:70vh; object-fit:contain; border-radius:8px">
+    </div>
+  </div>
+
+  <script>
+    // small helper: toggle mobile nav
+    function toggleMenu(){
+      const ul = document.getElementById('navlist');
+      if(ul.style.display === 'flex') ul.style.display = '';
+      else ul.style.display = 'flex';
+    }
+
+    // gallery modal
+    function openModal(src){
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal').classList.add('open');
+    }
+    function closeModal(){
+      document.getElementById('modal').classList.remove('open');
+    }
+
+    // animate on scroll (very small)
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); })
+    },{threshold:0.12});
+    document.querySelectorAll('[data-ani]').forEach(el=>obs.observe(el));
+
+    // contact form fallback UX
+    function formSubmit(e){
+      // simple success UX; real form handling requires a backend or Formspree config
+      e.preventDefault();
+      const form = e.target;
+      // try to POST to action; if not configured, open mailto
+      fetch(form.action, {method: form.method, body: new FormData(form), headers:{'Accept':'application/json'}})
+        .then(r=>{
+          if(r.ok){ alert('Permintaan berhasil dikirim — kami akan menghubungi Anda.'); form.reset(); }
+          else throw new Error('server');
+        })
+        .catch(()=>{
+          const mailto = `mailto:trikalandramandiri@gmail.com?subject=Permintaan%20Penawaran&body=Nama:%20${encodeURIComponent(form.name.value)}%0ANo:%20${encodeURIComponent(form.phone.value)}%0AService:%20${encodeURIComponent(form.service.value)}%0AMessage:%20${encodeURIComponent(form.message.value)}`;
+          if(confirm('Tidak dapat mengirim melalui formulir. Ingin mengirim via email?')) location.href = mailto;
+        })
+    }
+
+    // replace year in footer (since HTML string used new Date beforehand, ensure compatibility)
+    (function setYear(){
+      try{ document.querySelector('footer .muted').textContent = '© ' + new Date().getFullYear() + ' CV Tri Kalandra Mandiri — All rights reserved'; }catch(e){}
+    })();
+    
+    function toastPDF(){
+      let t = document.createElement('div');
+      t.innerText = 'Company Profile dibuka di tab baru — kamu tetap bisa kembali ke web ini ✅';
+      t.style.position='fixed';t.style.bottom='24px';t.style.right='24px';t.style.background='linear-gradient(135deg,#22C55E,#2563EB)';t.style.color='white';t.style.padding='12px 18px';t.style.borderRadius='12px';t.style.zIndex='9999';t.style.boxShadow='0 10px 30px rgba(0,0,0,.25)';
+      document.body.appendChild(t);
+      setTimeout(()=>t.remove(),3500);
+    }
+  </script>
+</body>
+</html>
